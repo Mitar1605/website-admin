@@ -1,0 +1,25 @@
+.main__video_title p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main__video_title p span {
+  color: #BABABA;
+  font-size: 20px;
+  font-weight: 400;
+}
+@media (max-width: 1440px) {
+  .main__video_title p span {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1250px) {
+  .main__video_title p span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 460px) {
+  .main__video_title p span {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */

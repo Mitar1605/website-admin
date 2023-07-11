@@ -1,0 +1,23 @@
+@import '../../src/scss/partials/breakpoints';
+
+.main__video_title{
+  p{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    span{
+      color: #BABABA;
+      font-size: 20px;
+      font-weight: 400;
+      @include desktop_xxl{
+        font-size: 16px;
+      }
+      @include desktop_lg{
+        font-size: 12px;
+      }
+      @include mobile_lg{
+        font-size: 16px;
+      }
+    }
+  }
+}

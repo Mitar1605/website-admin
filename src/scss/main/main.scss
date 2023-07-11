@@ -1,0 +1,434 @@
+@import '../partials/variebles';
+@import '../partials/breakpoints';
+@import '../header-aside/header';
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html, body{
+  min-height: 100%;
+  line-height: 1;
+}
+
+.wrapper{
+  width: 100%;
+  display: flex;  
+  @include tablet_md{
+    display: block;
+  }
+  font-family: 'Assistant', sans-serif;
+}
+
+// ..........
+
+.main__login_container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba($color: #000000, $alpha: .7);
+  z-index: 100;
+  font-family: 'Assistant', sans-serif;
+
+
+  .main__login{
+    width: 500px;
+    height: 668px;
+    @include tablet_xs{
+      width: 354px;
+      height: 502px;
+    }
+    border-radius: 15px;
+    background-color: #121212;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    .main__login_logo{
+      width: 180px;
+      height: 78px;
+      border-radius: 10px;
+      background: $orange;
+    }
+
+    .main__login_form{
+      width: 100%;
+      margin-top: 51px;
+      @include tablet_xs{
+        margin-top: 30px;
+      }
+
+      .main__login_form_input{
+        width: 100%;
+        min-height: 75px;
+        @include tablet_xs{
+          min-height: 55px;
+        }
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid #969696;
+        padding: 0 20px;
+        margin-top: 30px;
+        @include tablet_xs{
+          margin-top: 20px;
+        }
+
+        input{
+          width: 100%;
+          height: 100%;
+          background: none;
+          border: none;
+          outline: none;
+          color: #fff;
+          font-size: 20px;
+          padding: 0 15px;
+          font-family: 'Assistant', sans-serif;
+        }
+      }
+      a{
+        display: block;
+        text-align: right;
+        padding: 60px 0;
+        @include tablet_xs{
+          padding: 30px 0;
+        }
+      }
+
+      button{
+        width: 100%;
+        padding: 25px 0;
+        @include tablet_xs{
+          padding: 15px 0;
+        }
+        background-color: $orange;
+        border: none;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        font-family: 'Assistant', sans-serif;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
+
+.main__delete_video_container{
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  font-family: 'Assistant', sans-serif;
+
+  .main__delete_video{
+    width: 418px;
+    height: 223px;
+    @include mobile_lg{
+      width: 388px;
+      height: 200px;
+      padding: 40px;
+    }
+    border-radius: 10px;
+    background: $black;
+    padding: 50px;
+
+    h1{
+      font-size: 25px;
+      color: #fff;
+      text-align: center;
+      
+      @include mobile_lg{
+        font-size: 20px;
+      }
+    }
+
+    .main__delete_video_btns{
+      width: 100%;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+    
+      .main__delete_video_btn{
+        padding: 7px 51px;
+        border-radius: 5px;
+        border: 1px solid $orange;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Assistant', sans-serif;
+        cursor: pointer;
+        @include mobile_lg{
+          font-size: 16px;
+        }
+      }
+      .main__delete_video_btn_yes{
+        background: $orange;
+      }
+      .main__delete_video_btn_no{
+        background: $black;
+      }
+    }
+  }
+}
+
+.main__add_video_container{
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  font-family: 'Assistant', sans-serif;
+
+  .main__add_video{
+    width: 1422px;
+    min-height: 390px;
+    @include desktop_xxl{
+      width: 1100px;
+    }
+    @include desktop_lg{
+      width: 900px;
+    }
+    @include tablet_md{
+      width: 668px;
+    }
+    border-radius: 10px;
+    padding: 50px;
+    background: $black;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .main__add_video_tools{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      @include tablet_md{
+        flex-direction: column;
+      }
+
+      .main__add_video_img{
+        width: 315px;
+        height: 200px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.20);
+        background-image: url(../../../images/img-1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        
+        span{
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          z-index: 10;
+          border-radius: 3px;
+          color: #fff;
+          background: $grey;
+          padding: 2px 7px;
+        }
+      }
+
+      .main__add_video_redaktor{
+        width: 960px;
+        height: 200px;
+        @include tablet_md{
+          width: 100%;
+        }
+        background-image: url(../../../images/redaktor.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        p{
+          margin: 97px 17px;
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .main__add_video_btn{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      button{
+        @include mobile_lg{
+          width: 100%;
+        }
+        padding: 7px 31px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 10px;
+        background: $orange;
+        font-family: 'Assistant', sans-serif;
+        border: none;
+      }
+    }
+  }
+}
+
+.main{
+  width: 100%;
+  min-height: 100vh;
+  background: $grey;
+  padding: 50px 30px 0 332px;
+  @include tablet_md{
+    padding: 102px 30px;  
+  }
+  .main__container{
+    max-width: 1920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    @include desktop_xxl{
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    @include tablet_xs{
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+    @include mobile_lg{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main__add_video_card{
+      width: 100%;
+      max-height: 200px;
+      @include mobile_lg{
+        min-height: 200px;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .main__video_card{
+      width: 100%;
+      display: flex;
+      gap: 20px;
+
+      .main__video{
+        width: 100%;
+        .main__video_img{
+          width: 100%;
+          position: relative;
+  
+          img{
+            width: 100%;
+          }
+  
+          span{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            z-index: 10;
+            border-radius: 3px;
+            color: #fff;
+            background: $grey;
+            padding: 2px 7px;
+          }
+  
+        }
+        .main__video_title{
+          width: 100%;
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .video__title_img{
+            position: relative;
+            display: none;
+            @include mobile_lg{
+              display: block;
+              cursor: pointer;
+            }
+
+            .video__tools_tool_img{
+              display: none;
+              position: absolute;
+              z-index: 10;
+              top: -30%;
+              right: 200%;
+            }
+          }
+          
+          p{
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+  
+            @include desktop_xxl{
+              font-size: 16px;
+            }
+            @include desktop_lg{
+              font-size: 12px;
+            }
+            @include mobile_lg{
+              max-width: 90%;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .main__video_tools{
+        cursor: pointer;
+        @include mobile_lg{
+          display: none;
+        }
+        img{
+          @include desktop_xxl{
+            width: 24px;
+          }
+        }
+      }
+
+    }
+  }
+}

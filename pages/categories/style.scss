@@ -1,0 +1,112 @@
+@import '../../src/scss/partials/variebles';
+@import '../../src/scss/partials/breakpoints';
+@import '../../src/scss/header-aside/header';
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&display=swap');
+
+
+.main__container{
+  display: block !important;
+  .main__categories{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  
+    .main__categorie_card_add{
+      width: 130px;
+      height: 100px;
+      border-radius: 5px;
+      background: $black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+  
+      img{
+        width: 30%;
+      }
+    }
+  
+    .main__categorie_add_card{
+      width: 100%;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      .main__categorie_add{
+        width: 100%;
+        background: $black;
+        border-radius: 10px;
+        padding: 27px 35px 27px 50px;
+        .main__categorie_title{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        input{
+          width: 100%;
+          font-size: 25px;
+          color: #fff;
+          background: none;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+
+    .main__categorie_card{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      
+      .main__categorie{
+        width: 100%;
+        background: $black;
+        border-radius: 10px;
+        padding: 27px 35px 27px 50px;
+        cursor: pointer;
+        .main__categorie_title{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        p{
+          font-size: 25px;
+          color: #fff;
+        }
+
+        .main__categorie_options{
+          width: 100%;
+          display: none;
+          .main__categorie_option{
+            margin-top: 50px;
+            h3{
+              color: #fff;
+              font-size: 20px;
+            }
+            input{
+              width: 100%;
+              margin-top: 13px;
+              background: none;
+              border: none;
+              outline: none;
+              border-bottom: 1px solid #969696;
+              color: #fff;
+              font-family: 'Assistant', sans-serif;
+              font-size: 20px;
+              padding: 17px 0;
+            }
+          }
+        }
+      }
+
+      .main__categorie_delete{
+        cursor: pointer;
+      }
+    }
+  }
+}

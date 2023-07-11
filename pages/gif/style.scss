@@ -1,0 +1,27 @@
+@import '../../src/scss/partials/breakpoints';
+
+.main{
+  overflow: hidden;
+}
+
+.main__video_bgr{
+  width: 100%;
+  height: 84%;
+  display: none;
+  @include mobile_lg{
+    display: block;
+  }
+  background: rgba(0, 0, 0, 0.50);
+  position: relative;
+  top: -84%;
+  left: 0;
+}
+
+.main__video_title {
+  width: 100%;
+  position: relative;
+  top: -280px;
+  z-index: 49;
+  justify-content: flex-end !important;
+  padding-right: 15px !important;
+}
